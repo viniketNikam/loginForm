@@ -1,14 +1,35 @@
-<button (click)="addNewRegistration()">Sign Up</button>
-<div *ngIf="newPassword !== confirmPassword">
-  New Password and Confirm Password should be same.
-</div>
-<div><label>Name:</label><input type="text" [(ngModel)]="name" /></div>
-<div><label>Email ID:</label><input type="text" [(ngModel)]="emailId" /></div>
-<div>
-  <label>New Password:</label
-  ><input type="password" [(ngModel)]="newPassword" />
-</div>
-<div>
-  <label>Confirm Password:</label
-  ><input type="password" [(ngModel)]="confirmPassword" />
+<!-- <form class="row g-3 needs-validation" novalidate></form> -->
+
+<div class="container">
+  <div>
+    <label for="validationCustom01" class="form-label">Name:</label
+    ><input class="form-control" type="text" [(ngModel)]="name" />
+  </div>
+
+  <div>
+    <label class="form-label">Email ID:</label
+    ><input class="form-control" type="text" [(ngModel)]="emailId" />
+  </div>
+  <div>
+    <label class="form-label">New Password:</label
+    ><input class="form-control" type="password" [(ngModel)]="newPassword" />
+  </div>
+  <div>
+    <label class="form-label">Confirm Password:</label
+    ><input
+      class="form-control"
+      type="password"
+      [(ngModel)]="confirmPassword"
+    />
+    <div *ngIf="newPassword !== confirmPassword">
+      New Password and Confirm Password should be same.
+    </div>
+  </div>
+  <button
+    class="btn btn-primary margin10"
+    type="submit"
+    (click)="addNewRegistration()"
+  >
+    Sign Up
+  </button>
 </div>
