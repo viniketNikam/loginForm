@@ -1,0 +1,14 @@
+<button (click)="addNewRegistration()">Sign Up</button>
+<div *ngIf="newPassword !== confirmPassword">
+  New Password and Confirm Password should be same.
+</div>
+<div><label>Name:</label><input type="text" [(ngModel)]="name" /></div>
+<div><label>Email ID:</label><input type="text" [(ngModel)]="emailId" /></div>
+<div>
+  <label>New Password:</label
+  ><input type="password" [(ngModel)]="newPassword" />
+</div>
+<div>
+  <label>Confirm Password:</label
+  ><input type="password" [(ngModel)]="confirmPassword" />
+</div>

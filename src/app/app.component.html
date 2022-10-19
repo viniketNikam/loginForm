@@ -1,0 +1,10 @@
+<h1 class="heading">Welcome to my page</h1>
+<h4>If you are a new user, please register</h4>
+<h4>If you have already registered, please login</h4>
+<button (click)="showLogin()">Login</button
+><button (click)="showRegister()">Register</button>
+<app-login-form *ngIf="isLogin" (addLogin)="addLogin($event)"></app-login-form>
+<app-registration
+  *ngIf="isRegistration"
+  (addRegistration)="addUser($event)"
+></app-registration>
